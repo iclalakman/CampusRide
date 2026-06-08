@@ -2,10 +2,10 @@
 
 CampusRide is a comprehensive web application designed to optimize intra-campus commute efficiency for university networks. Developed as a full-stack engineering solution, the platform bridges 'Passengers' requesting rides with certified 'Drivers', enforced by relational database constraints, dynamic attribute updates, and secure cryptographic handshakes.
 
-# Architectural Core & Relational Database Design
+## Architectural Core & Relational Database Design
 The foundation of CampusRide relies heavily on the **Enhanced Entity-Relationship (EER)** model, emphasizing strict data integrity and real-world campus commute semantics.
 
-# Advanced EER Modeling & Constraints
+## Advanced EER Modeling & Constraints
 * **Overlap Specialization (O):** Modeled using the Overlap constraint from the `User` supertype down to `Admin`, `Passenger`, and `Driver` subtypes. This allows structural flexibility, enabling an Admin to simultaneously act as a Passenger to request rides, or a Driver to switch roles seamlessly without compromising relational mapping.
 * **Referential Integrity Constraints:** Robust `FOREIGN KEY` constraints (e.g., `ON DELETE CASCADE`) manage the relational cascade between tuples in `Post`, `Offer`, and `Ride` relations, preventing orphaned records.
 * **Business Logic Constraints:** Sourced directly from local PostgreSQL schemas, the platform enforces capacity validation logic ensuring that a driver's vehicle passenger capacity (`Car.seat_number`) strictly satisfies the passenger request constraint (`Post.passenger_number`).
@@ -19,7 +19,7 @@ The foundation of CampusRide relies heavily on the **Enhanced Entity-Relationshi
 * **Frontend UI:** Semantically structured **HTML5**, **CSS3 (Custom Flexbox/Grid)**, and asynchronous **JavaScript (Fetch API)** mirroring premium SaaS application matrices.
 * **Security Layer:** Cryptographic password hashing powered by `werkzeug.security` via salted **Scrypt** algorithms to protect sensitive user credentials against reverse-engineering vectors.
 
-## ⚡ Key System Features
+## Key System Features
 
 1. **Dynamic Authentication Matrix:** Dual-layer login mechanics that automatically determine roles (Admin vs. Standard User Matrix). Includes a simulated OTP Security Gateway for transaction verification.
 2. **The Active Posts Feed:** Case-insensitive, real-time filtered lookup engine utilizing SQL `LOWER()` and pattern matching (`LIKE %search%`) to fetch live commuter requests instantly.
