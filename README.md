@@ -27,7 +27,3 @@ The foundation of CampusRide relies heavily on the **Enhanced Entity-Relationshi
 4. **Automated Ride Provisioning:** Accepting a driver's proposal automatically triggers an atomic transaction fanning out to instantiate a new record in the `Ride` tuple matrix.
 5. **Dynamic Database Mutator (My Account):** A dedicated profile panel allowing active users to update telephone strings, gender attributes, and security credentials directly inside the local database instance using live `UPDATE` pipelines.
 6. **Relational Analytical Rating (0-5 Stars):** Post-ride feedback updates the specific `Ride` record and executes a nested subquery to recalculate and store the overall cumulative average score (`Driver.rate`) dynamically.
-
-        host="localhost",
-        port=5432
-    )
